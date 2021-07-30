@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TehGame</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tooltips.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/gamemanager.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/startgameBTN.js"></script>
+    <script src="js/townreturn.js"></script>
+    <script src="js/training.js"></script>
+    <style>
+    /* width */
+    ::-webkit-scrollbar {
+      width: 15px;;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #CD853F;
+      border-radius: 10px;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="summary">
+      <p id="result" style="font-size: 40px;">You WIN!!!</p>
+      <div id="loot">
+      </div>
+
+      <button class="summarybtn" id="nextEnemy" onclick="GameManager.setAnotherFight()" style="cursor:pointer;padding-left:5px;padding-right: 5px;position: relative">GO FURTHER</button>
+      <button class="summarybtn" id="goTown" onclick="townReturn()" style="cursor:pointer;padding-left:5px;padding-right: 5px;position: relative">BACK TO TOWN</button>
+    </div>
+    <div class="container">
+
+
+      <div class="header" id="firstScreen">
+         <h1>Play Da Grejtest Arpidżi Eva!</h1>
+         <button id="startBTN" onclick="stgm()" style="cursor:pointer;padding-left:10px;padding-right: 10px">Start the new game!!!</button>
+
+      </div>
+
+
+      <div class="classChoice" id="cC">
+        <div class="namebox">
+          <label for="name">Choose Your Name: </label>
+          <input type="text" id="name" style="cursor:default;padding-left:15px;height:30%"placeholder="Type Your name here">
+        </div>
+        <a class="class" href="#" onclick="GameManager.createPlayer(document.getElementById('name').value, 'Warrior')">
+          <img src="img/warrior1.jpg" alt="warrior">
+          <div class="innerClass">
+            <h2>Warrior</h2>
+            <p>Warriors class info</p>
+          </div>
+        </a>
+        <a class="class" href="#" onclick="GameManager.createPlayer(document.getElementById('name').value, 'Rogue')">
+          <img src="img/rogue1.jpg" alt="rogue">
+          <div class="innerClass">
+            <h2>Rogue</h2>
+            <p>Rogue class info</p>
+          </div>
+        </a>
+        <a class="class" href="#" onclick="GameManager.createPlayer(document.getElementById('name').value, 'Mage')">
+          <img src="img/mage1.jpg" alt="mage">
+          <div class="innerClass">
+            <h2>Mage</h2>
+            <p>Mage class info</p>
+          </div>
+        </a>
+        <a class="class" href="#" onclick="GameManager.createPlayer(document.getElementById('name').value, 'Hunter')">
+          <img src="img/hunter1.jpg" alt="hunter">
+          <div class="innerClass">
+            <h2>Hunter</h2>
+            <p>Hunter class info</p>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="town" id="town">
+        <a href="#" class="townplaces" onclick="GameManager.setPrefight()">
+          <img src="img/dungeon.jpg" alt="dungeon">
+          <p class="normal">Dungeon</p>
+        </a>
+        <a href="#" class="townplaces">
+          <img src="img/inn.jpg" alt="inn">
+          <p class="normal">Placeholder</p>
+        </a>
+        <a href="#" class="townplaces" onclick="trainingView()">
+          <img src="img/training.jpg" alt="training">
+          <p class="normal">Training</p>
+        </a>
+
+        <a href="#"class="townplaces">
+          <img src="" alt="coach">
+        <p class="normal">Placeholder</p>
+        </a>
+
+      </div>
+
+      <div class="dungeon" id="dung">
+        <div class="player">
+
+        </div>
+
+        <div class="actions" id="actions">
+
+        </div>
+
+        <div class="arena" id="arena" >
+          <!-- <p>Tutaj pokazane beda uzyte umiejetnosci i obrazenia</p> -->
+        </div>
+
+        <div class="enemy">
+
+        </div>
+      </div>
+
+      <div class="inn">
+
+      </div>
+
+      <div class="training" id="training">
+        <p id="pGold"></p>
+        <div id="statistics" style="padding-bottom:100px;width: 80%;text-align: left;display:flex;flex-direction:column">
+
+        </div>
+        <button class="summarybtn" onclick="townReturn()" style="width:50%; cursor:pointer;padding-left:5px;padding-right: 5px;position: relative">Back to town</button>
+      </div>
+
+      <div class="pTrainer">
+
+      </div>
+
+    </div>
+  </body>
+</html>

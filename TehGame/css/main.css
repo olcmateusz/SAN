@@ -1,0 +1,221 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'friz_quad';
+  font-size: 25px;
+  color: #CD853F;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.container:hover{
+  cursor: grab;
+}
+
+
+h1{
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+
+.container{
+  display: flex;
+  /* border: 10px solid #DAA520; */
+  height: 90vh;
+  width: 30vw;
+  /* background-color: #5C5F58; */
+  background-image: url(../Panel-bg-stacked.18def74ed60ab9f1f4139f87349d2f79.jpg);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.summarybtn{
+  color: black;
+  background-color: #CD853F;
+  border-color: #CD853F;
+  border-radius: 20px;
+}
+
+.inn, .training, .pTrainer{
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#summary{
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 90vh;
+  width: 30vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5;
+}
+
+.class{
+  width: 100%;
+  height: 22%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.innerClass{
+  width: calc(100% - 155px);
+  text-align: center;
+}
+
+.namebox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:  space-evenly;
+  height: 10%;
+}
+
+#startBTN{
+  color: black;
+  background-color: #CD853F;
+  border-color: #CD853F;
+  border-radius: 20px;
+}
+
+#name{
+  border-radius: 20px;
+}
+
+.classChoice{
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.classChoice img{
+  padding-left: 15px;
+}
+
+.town{
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.townplaces{
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.townplaces img{
+  padding-left: 15px;
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+
+.normal{
+  text-align: center;
+}
+
+#dung{
+  display: none;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.player{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+}
+
+.player img{
+  padding-left: 15px;
+  float: left;
+  height: 80%;
+}
+
+
+.actions{
+  height: 10%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.actions a{
+  width: 15%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+
+.actions img{
+  width: 100%;
+  height:100%;
+}
+
+.arena{
+  height: 30%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+  align-items: center;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CD853F;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid transparent;  /* creates padding around scroll thumb */
+}
+
+.enemy{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+}
+
+.enemy img{
+  padding-left: 15px;
+  float: left;
+  height: 80%;
+}
+
+@font-face {
+  font-family: 'friz_quad';
+  src: url('../friz-quadrata-std-medium-5870338ec7ef8.otf');
+}
