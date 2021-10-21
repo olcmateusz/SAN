@@ -1,6 +1,5 @@
 package com.olcmat.onlinevotes.domain;
 
-import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
