@@ -1,6 +1,10 @@
 package com.olcmat.onlinevotes.domain;
 
+import com.olcmat.onlinevotes.security.Authority;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -9,6 +13,8 @@ public class User {
     private String username;
     private String password;
     private String name;
+    private Set<Authority> authorities = new HashSet<>();
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,5 +48,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    public Set<Authority> getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(Set<Authority> authorities) {
+        this.authorities = authorities;
     }
 }
