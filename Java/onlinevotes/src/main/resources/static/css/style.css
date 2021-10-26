@@ -21,6 +21,7 @@ video {
 input{
   width:20vw;
   height:5vh;
+  padding-left: 8px;
 }
 
 .spot{
@@ -40,7 +41,7 @@ input{
   font-size: 25px;
   color: #DAA520;
   cursor: pointer;
-  background-image: url(../IMG/background_nav.jpg);
+  /*background-image: url(../IMG/background_nav.jpg);*/
 }
 .navwrapper{
   float: left;

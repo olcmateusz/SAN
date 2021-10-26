@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="fragments/general :: head">
+</head>
+<body>
+<div th:insert="fragments/general :: menu"></div>
+<div class="content" style="background-color:rgba(16,16,16,0.8); height:60vh; justify-content: center;">
+        <h1>Products</h1>
+        <div th:each="product : ${products}">
+            <a th:href="@{/products/{productId}(productId=${product.id})}" th:text="${product.name}"></a>
+        </div>
+</div>
+<div th:insert="fragments/general :: footer"></div>
+</body>
+</html>

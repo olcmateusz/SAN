@@ -12,64 +12,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </div>
-<div th:fragment="menu">
-<div class="backgroudvid">
-    <video th:src="@{/IMG/header-illidan.webm}" autoplay muted loop>
-    </video>
-</div>
+<div th:fragment="menu" th:remove="tag">
 
-<div class="spaceTop">
-</div>
-
-<div class="navbar">
-
-    <a class="logo" href="../index.html">
-        <div class="siteNavLogo">
-            <img alt="logofull" th:src="@{/IMG/Logo-wow-sitenav.596840db77b4d485a44d65e897e3de57.png}" class="logoBig">
-            <img alt="logomobile" th:src="@{/IMG/Logo-wowIcon.01e2c443798558c38d8e3b143a6f0d03.png}" class="logoSmall">
+        <div class="backgroudvid">
+            <video th:src="@{/IMG/header-illidan.webm}" autoplay muted loop>
+            </video>
         </div>
-    </a>
 
-    <div class="navwrapper">
-        <ul class="navlink">
-            <li class="nav-link">
-                <a href="../Create Account/index.html">Create Account</a>
-            </li>
-            <li class="nav-link">
-                <a href="../Forum/index.html">Forum</a>
-            </li>
-            <li class="nav-link">
-                <a href="../Download/index.html">Download</a>
-            </li>
-            <li class="nav-link">
-                <a href="../Armory/index.html">Armory</a>
-            </li>
-        </ul>
-
-    </div>
-    <div class="menuButton">
-        <div class="menuButtonBurger">
-
+        <div class="spaceTop">
         </div>
+    <div id="trickBootstrap">
+        <div class="navbar">
+            <a class="logo" th:href="@{/}">
+                <div class="siteNavLogo">
+                    <img alt="logofull" th:src="@{/IMG/Logo-wow-sitenav.596840db77b4d485a44d65e897e3de57.png}" class="logoBig">
+                    <img alt="logomobile" th:src="@{/IMG/Logo-wowIcon.01e2c443798558c38d8e3b143a6f0d03.png}" class="logoSmall">
+                </div>
+            </a>
+
+            <div class="navwrapper">
+                <ul class="navlink">
+                    <li class="nav-link">
+                        <a th:href="@{/create_account}">Create Account</a>
+                    </li>
+                    <li class="nav-link">
+                        <a th:href="@{/forum}">Forum</a>
+                    </li>
+                    <li class="nav-link">
+                        <a th:href="@{/download}">Download</a>
+                    </li>
+                    <li class="nav-link">
+                        <a th:href="@{/armory}">Armory</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="menuButton">
+                <div class="menuButtonBurger">
+
+                </div>
+            </div>
+            <a class="floatr" th:href="@{/login}">Log In</a>
+        </div>
+
+        <script th:src="@{/JS/navbar.js}"></script>
+
+        <div class="mobileNav">
+            <a th:href="@{/Create Account/index.html}">Create Account</a>
+            <a th:href="@{/Forum/index.html}">Forum</a>
+            <a th:href="@{/Download/index.html}">Download</a>
+            <a th:href="@{/Armory/index.html}">Armory</a>
+            <a th:href="@{/Log In/index.html}">Log In</a>
+        </div>
+
+        <script th:src="@{/JS/burger.js}"></script>
     </div>
-    <a class="floatr" th:href="@{/Log In/index.html}">Log In</a>
+        <div class="spaceTiny">
+        </div>
 
-</div>
-
-<script th:src="@{/JS/navbar.js}"></script>
-
-<div class="mobileNav">
-    <a th:href="@{/Create Account/index.html}">Create Account</a>
-    <a th:href="@{/Forum/index.html}">Forum</a>
-    <a th:href="@{/Download/index.html}">Download</a>
-    <a th:href="@{/Armory/index.html}">Armory</a>
-    <a th:href="@{/Log In/index.html}">Log In</a>
-</div>
-
-<script th:src="@{/JS/burger.js}"></script>
-
-<div class="spaceTiny">
-</div>
 </div>
 <div class="content" th:fragment="content">
 </div>

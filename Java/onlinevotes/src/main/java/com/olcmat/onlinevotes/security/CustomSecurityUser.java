@@ -1,12 +1,7 @@
 package com.olcmat.onlinevotes.security;
 
-
 import com.olcmat.onlinevotes.domain.User;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.Set;
 
 public class CustomSecurityUser extends User implements UserDetails {

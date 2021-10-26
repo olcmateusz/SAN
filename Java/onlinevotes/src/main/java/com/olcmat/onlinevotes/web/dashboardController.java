@@ -11,8 +11,8 @@ public class dashboardController {
         return "index";
     }
 
-    @GetMapping("/dashboard")
-    public String dashboard(){
-        return"dashboard";
+    @GetMapping("/armory")
+    public String armory(){
+        return "armory";
     }
 }

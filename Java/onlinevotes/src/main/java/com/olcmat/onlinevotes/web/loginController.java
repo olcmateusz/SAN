@@ -34,8 +34,8 @@ public class loginController {
     @PostMapping("/register")
     public String registerPost(User user){
         User savedUser = userService.save(user);
-        System.out.println(user);
-        System.out.println(savedUser);
+//        System.out.println(user);
+//        System.out.println(savedUser);
         return "redirect:/login";
     }
 
